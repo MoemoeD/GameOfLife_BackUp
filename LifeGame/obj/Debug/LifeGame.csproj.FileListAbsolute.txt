@@ -1,9 +1,0 @@
-D:\Project\LifeGame\LifeGame\bin\Debug\LifeGame.exe.config
-D:\Project\LifeGame\LifeGame\bin\Debug\LifeGame.exe
-D:\Project\LifeGame\LifeGame\bin\Debug\LifeGame.pdb
-D:\Project\LifeGame\LifeGame\obj\Debug\LifeGame.Properties.Resources.resources
-D:\Project\LifeGame\LifeGame\obj\Debug\LifeGame.csproj.GenerateResource.Cache
-D:\Project\LifeGame\LifeGame\obj\Debug\LifeGame.exe
-D:\Project\LifeGame\LifeGame\obj\Debug\LifeGame.pdb
-D:\Project\LifeGame\LifeGame\obj\Debug\LifeGame.csprojResolveAssemblyReference.cache
-D:\Project\LifeGame\LifeGame\obj\Debug\LifeGame.Main.resources
