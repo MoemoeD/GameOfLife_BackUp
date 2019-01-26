@@ -33,6 +33,7 @@
             // 
             // lblMsg
             // 
+            this.lblMsg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblMsg.AutoSize = true;
             this.lblMsg.Location = new System.Drawing.Point(45, 816);
             this.lblMsg.Name = "lblMsg";
@@ -48,9 +49,9 @@
             this.Controls.Add(this.lblMsg);
             this.Name = "Main";
             this.Text = "Main";
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
-            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
-            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseClick);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Main_Paint);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Main_KeyPress);
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Main_MouseClick);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -17,13 +17,21 @@ namespace LifeGame
             InitializeComponent();
         }
 
+        //横向
         public const int gameX = 150;
 
+        //纵向
         public const int gameY = 80;
 
+        //实时状态
         public static bool[,] state = new bool[gameX, gameY];
 
-        private void Form1_Paint(object sender, PaintEventArgs e)
+        /// <summary>
+        /// 画背景
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Main_Paint(object sender, PaintEventArgs e)
         {
             Pen pen = new Pen(Color.Black);
             Graphics g = e.Graphics;
@@ -42,7 +50,12 @@ namespace LifeGame
             }
         }
 
-        private void Form1_MouseClick(object sender, MouseEventArgs e)
+        /// <summary>
+        /// 点击变色
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Main_MouseClick(object sender, MouseEventArgs e)
         {
             if (e.Button != MouseButtons.Left)
             {
@@ -60,13 +73,17 @@ namespace LifeGame
             g.Dispose();
         }
 
-        private void Form1_KeyPress(object sender, KeyPressEventArgs e)
+        /// <summary>
+        /// 演化
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Main_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar != 13)
             {
                 return;
             }
-
             bool[,] s = new bool[gameX, gameY];
             for (int x = 0; x < gameX; x++)
             {
@@ -94,9 +111,17 @@ namespace LifeGame
             this.y = y;
             this.rectangle = new Rectangle(this.x * 10 + 1, this.y * 10 + 1, 9, 9);
         }
+
+        //横向
         public int x { get; set; }
+
+        //纵向
         public int y { get; set; }
+
+        //方块
         public Rectangle rectangle { get; set; }
+
+        //演化
         public bool setNewState()
         {
             int count = 0;
@@ -105,13 +130,9 @@ namespace LifeGame
                 for (int j = -1; j <= 1; j++)
                 {
                     if (i == 0 && j == 0)
-                    {
                         continue;
-                    }
                     if (this.x + i < 0 || this.x + i >= Main.gameX || this.y + j < 0 || this.y + j >= Main.gameY)
-                    {
                         continue;
-                    }
                     if (Main.state[this.x + i, this.y + j])
                         count++;
                 }
